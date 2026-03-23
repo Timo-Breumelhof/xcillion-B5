@@ -1,4 +1,4 @@
-## Xcillion-5
+# Xcillion-5 DNN theme - Bootstrap 5
 
 > A modern reimagining of the classic DNN Xcillion theme — rebuilt from the ground up for Bootstrap 5.
 
