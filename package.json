@@ -20,5 +20,8 @@
     "sass": "^1.97.2"
   },
   "author": "Timo Breumelhof",
-  "license": "LGPL-3.0-or-later"
+  "license": "LGPL-3.0-or-later",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
 }
