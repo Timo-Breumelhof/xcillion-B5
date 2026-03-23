@@ -12,7 +12,7 @@ This is the theme to use for new DNN projects, or as the destination when migrat
 
 ### Migrating from an older Xcillion version?
 
-Xcillion-5 is designed to be used alongside **[Xcillion-3](link-to-xcillion-3)** during migration. Because both themes share the same design language and naming convention, you can run them side by side on the same DNN installation and convert your pages one at a time — no big-bang migration required. Once all pages are moved over, simply retire Xcillion-3.
+Xcillion-5 is designed to be used alongside **[[Xcillion-3]([link-to-xcillion-3](https://github.com/Timo-Design/xcillion-3))](https://github.com/Timo-Design/xcillion-3)** during migration. Because both themes share the same design language and naming convention, you can run them side by side on the same DNN installation and convert your pages one at a time — no big-bang migration required. Once all pages are moved over, simply retire Xcillion-3.
 
 ---
 
