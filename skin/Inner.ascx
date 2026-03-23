@@ -18,10 +18,6 @@
 
 <dnn:META ID="META1" runat="server" Name="viewport" Content="width=device-width,initial-scale=1" />
 
-<!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-<![endif]-->
-
 <div id="siteWrapper">
 
     <!-- UserControlPanel  -->
@@ -29,7 +25,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div id="search-top" class="pull-right small-screens hidden-sm hidden-md hidden-lg">
+                    <div id="search-top" class="small-screens d-sm-none">
                         <dnn:SEARCH ID="dnnSearch2" runat="server" ShowSite="false" ShowWeb="false" EnableTheming="true" Submit="Search" CssClass="SearchButton" />
                     </div>
                 </div>
@@ -39,12 +35,12 @@
                     <div class="language">
                         <dnn:LANGUAGE runat="server" ID="LANGUAGE1" ShowMenu="False" ShowLinks="True" />
                     </div>
-                    <div class="search hidden-xs">
+                    <div class="search d-none d-sm-block">
                         <dnn:SEARCH ID="dnnSearch" runat="server" ShowSite="false" ShowWeb="false" EnableTheming="true" Submit="Search" CssClass="SearchButton" />
                     </div>
                     <%-- search action for Search function on small devices --%>
                     <a id="search-action" aria-label="Search"></a>
-                    <div id="login" class="pull-right">
+                    <div id="login" class="float-end">
                         <dnn:LOGIN ID="dnnLogin" CssClass="LoginLink" runat="server" LegacyMode="false" />
                         <dnn:USER ID="dnnUser" runat="server" LegacyMode="false" />
                     </div>
@@ -56,7 +52,7 @@
     <!--Header -->
     <header role="banner">
         <div id="mainHeader-inner" class="container">
-            <div class="navbar navbar-default" role="navigation">
+            <div class="navbar navbar-expand-md" role="navigation">
                 <div id="navbar-top-wrapper">
                     <div id="logo">
                         <span class="brand">
@@ -64,16 +60,11 @@
                         </span>
                     </div>
                 </div>
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div id="navbar" class="collapse navbar-collapse pull-right">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <span class="visually-hidden">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbar" class="collapse navbar-collapse">
                     <dnn:MENU ID="MENU" MenuStyle="Menus/MainMenu" runat="server" NodeSelector="*"></dnn:MENU>
                 </div>
             </div>
@@ -84,7 +75,7 @@
     <div class="container">
         <main role="main">
             <div class="row dnnpane">
-                <div id="HeaderPane" class="col-md-12 headerPane" runat="server"></div> 
+                <div id="HeaderPane" class="col-md-12 headerPane" runat="server"></div>
             </div>
             <div id="breadcrumb" class="col-md-12">
                 <dnn:BREADCRUMB ID="dnnBreadcrumb" runat="server" CssClass="breadcrumbLink" RootLevel="0" Separator="&lt;img src=&quot;/Portals/_default/Skins/Xcillion/Images/breadcrumb-arrow.png&quot; alt=&quot;breadcrumb separator&quot;&gt;" HideWithNoBreadCrumb="true" />
@@ -126,7 +117,7 @@
                 <div class="row dnnpane">
                     <div id="footer_25_1" class="footer-col col-md-3 col-sm-6" runat="server"></div>
                     <div id="footer_25_2" class="footer-col col-md-3 col-sm-6" runat="server"></div>
-                    <div class="clearfix visible-sm"></div>
+                    <div class="clearfix d-none d-sm-block d-md-none"></div>
                     <div id="footer_25_3" class="footer-col col-md-3 col-sm-6" runat="server"></div>
                     <div id="footer_25_4" class="footer-col col-md-3 col-sm-6" runat="server"></div>
                 </div>
