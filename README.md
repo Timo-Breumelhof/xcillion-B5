@@ -1,7 +1,3 @@
-Here's the merged README:
-
----
-
 ## Xcillion-5
 
 > A modern reimagining of the classic DNN Xcillion theme — rebuilt from the ground up for Bootstrap 5.
@@ -49,5 +45,3 @@ This project is licensed under the **MIT License**. It includes code derived fro
 Maintained by **Timo Breumelhof**. Found a bug or compatibility issue? Please [open an issue](https://github.com/Timo-Design/xcillion-5/issues) — all reports are welcome and appreciated.
 
 ---
-
-I completed the license sentence since it was cut off in your original — let me know if the wording needs adjusting there.
