@@ -20,22 +20,18 @@
 @import "base/extends";
 
 
+
 // ----------------------------------------------------------------------
   // Layout
 // ----------------------------------------------------------------------
-
-
-// ----------------------------------------------------------------------
-  // Modules
-// ----------------------------------------------------------------------
-@import "modules/header";
-@import "modules/navigation";
-@import "modules/breadcrumbs";
-@import "modules/main";
-@import "modules/forms";
-@import "modules/footer";
-@import "modules/containers";
-@import "modules/examples";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/breadcrumbs";
+@import "layout/main";
+@import "layout/forms";
+@import "layout/footer";
+@import "layout/containers";
+@import "layout/examples";
 
 
 // ----------------------------------------------------------------------

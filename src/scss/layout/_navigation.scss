@@ -1,0 +1,71 @@
+/*========== MAIN NAVIGATION  ==========*/
+
+.navbar {
+
+    .navbar-nav {
+        li {
+            list-style-type: none; // Overrule DNN default.css for ul li
+        }
+    }
+}
+
+
+   
+
+.navbar-nav {
+   
+    // General styling
+   .nav-item{ // Nav item (li)
+    position: relative;
+        display:flex;
+        align-items:center;
+        &.active{
+            background: $gray-200;
+        }
+   }
+
+   .nav-link{
+        
+   }
+
+   .dropdown-toggle{
+        display:inline-block;
+        line-height: 1.3em;
+        width: 1.3em;
+        aspect-ratio: 1/1;
+        text-align:center;
+        border-radius: 50%;
+
+        &:hover{
+            background: $gray-100;
+        }
+
+        // Rotate when opened
+        &.show {
+            &:after {
+                transform: rotate(180deg);
+                transition: all 0.3s;
+            }
+        }
+
+   }
+
+    .dropdown-menu {
+
+
+
+        
+
+    }
+}
+
+$navbar-toggle-color: #f00;
+// Nav Bar Toggler
+.navbar-toggler {
+    --bs-navbar-color: #{$navbar-toggle-color};
+    --bs-navbar-toggler-padding-y: 0.3em;
+    --bs-navbar-toggler-padding-x: 0.3em;
+    --bs-navbar-toggler-border-color: transparent;
+    --bs-navbar-toggler-border-radius: 50%;
+    font-size: 2em;
+}
