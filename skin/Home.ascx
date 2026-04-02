@@ -66,7 +66,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div id="navbar" class="collapse navbar-collapse">
-                    <dnn:MENU ID="MENU" MenuStyle="Menus/MainMenu" runat="server" NodeSelector="*"></dnn:MENU>
+                    <dnn:MENU ID="MENU" MenuStyle="menus/mainmenus" runat="server" NodeSelector="*"></dnn:MENU>
                 </div>
             </div>
         </div>
