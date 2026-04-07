@@ -59,6 +59,14 @@
     }
 }
 
+#dnnMenu .menuItem {
+    word-wrap: break-word;
+
+    @media (min-width: 768px) { max-width: 720px; }
+    @media (min-width: 992px) { max-width: 940px; }
+    @media (min-width: 1200px) { max-width: 1138px; }
+}
+
 $navbar-toggle-color: #f00;
 // Nav Bar Toggler
 .navbar-toggler {
