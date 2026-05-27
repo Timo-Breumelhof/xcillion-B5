@@ -16,8 +16,7 @@ ul li li { list-style-type:circle; }
 ol li { list-style-type: decimal;  list-style-position: inside;}
 .nav li { list-style:none!important;}
 a{
-    -moz-outline:!important;
-    outline:none!important;
+    outline:none !important;
     border:0;
 }
 ul#myTab { padding:0; margin:0; }
