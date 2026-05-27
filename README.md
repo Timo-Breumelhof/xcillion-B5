@@ -38,7 +38,9 @@ The original project targeted DNN 8 with Bootstrap 3 and has been inactive since
 
 ### License
 
-This project is licensed under the **MIT License**. It includes code derived from the original **Xcillion** project by XCESS, also MIT licensed.
+Copyright (C) 2026 Timo Breumelhof / timo-design.nl. Licensed under the **GNU Lesser General Public License v3.0 or later** (LGPL-3.0-or-later). See [LICENSE](LICENSE) for the full terms.
+
+This project includes code derived from the original **Xcillion** project by XCESS (MIT licensed) and **jQuery SmartMenus** by Vasil Dinkov, Vadikom Web Ltd. (MIT licensed). See [NOTICES](NOTICES) for full attribution.
 
 ---
 
