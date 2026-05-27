@@ -1,10 +1,10 @@
-# Xcillion-5 DNN theme - Bootstrap 5
+# Xcillion-B5 DNN theme - Bootstrap 5
 
 > A modern reimagining of the classic DNN Xcillion theme — rebuilt from the ground up for Bootstrap 5.
 
 ⚠️ **In development!**
 
-**Xcillion-5** is a modernized, standalone rewrite of the Xcillion theme that shipped with DNN 8 and was replaced by the Aperture theme in DNN 10 — upgraded from Bootstrap 3 to Bootstrap 5. It aims to bring the original theme up to current web standards while keeping it lightweight, maintainable, and framework-native.
+**Xcillion-B5** is a modernized, standalone rewrite of the Xcillion theme that shipped with DNN 8 and was replaced by the Aperture theme in DNN 10 — upgraded from Bootstrap 3 to Bootstrap 5. It aims to bring the original theme up to current web standards while keeping it lightweight, maintainable, and framework-native.
 
 This is the theme to use for new DNN projects, or as the destination when migrating an existing site away from Bootstrap 3.
 
@@ -12,7 +12,7 @@ This is the theme to use for new DNN projects, or as the destination when migrat
 
 ### Migrating from an older Xcillion version?
 
-Xcillion-5 is designed to be used alongside **[[Xcillion-3]([link-to-xcillion-3](https://github.com/Timo-Design/xcillion-3))](https://github.com/Timo-Design/xcillion-3)** during migration. Because both themes share the same design language and naming convention, you can run them side by side on the same DNN installation and convert your pages one at a time — no big-bang migration required. Once all pages are moved over, simply retire Xcillion-3.
+Xcillion-B5 is designed to be used alongside **[Xcillion-B3](https://github.com/Timo-Design/xcillion-b3)** during migration. Because both themes share the same design language and naming convention, you can run them side by side on the same DNN installation and convert your pages one at a time — no big-bang migration required. Once all pages are moved over, simply retire Xcillion-B3.
 
 ---
 
@@ -38,10 +38,12 @@ The original project targeted DNN 8 with Bootstrap 3 and has been inactive since
 
 ### License
 
-This project is licensed under the **MIT License**. It includes code derived from the original **Xcillion** project by XCESS, also MIT licensed.
+Copyright (C) 2026 Timo Breumelhof / timo-design.nl. Licensed under the **GNU Lesser General Public License v3.0 or later** (LGPL-3.0-or-later). See [LICENSE](LICENSE) for the full terms.
+
+This project includes code derived from the original **Xcillion** project by XCESS (MIT licensed) and **jQuery SmartMenus** by Vasil Dinkov, Vadikom Web Ltd. (MIT licensed). See [NOTICES](NOTICES) for full attribution.
 
 ---
 
-Maintained by **Timo Breumelhof**. Found a bug or compatibility issue? Please [open an issue](https://github.com/Timo-Design/xcillion-5/issues) — all reports are welcome and appreciated.
+Maintained by **Timo Breumelhof**. Found a bug or compatibility issue? Please [open an issue](https://github.com/Timo-Design/xcillion-b5/issues) — all reports are welcome and appreciated.
 
 ---
