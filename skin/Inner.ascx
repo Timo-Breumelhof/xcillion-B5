@@ -31,16 +31,16 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 d-flex">
                     <div class="language">
                         <dnn:LANGUAGE runat="server" ID="LANGUAGE1" ShowMenu="False" ShowLinks="True" />
                     </div>
-                    <div class="search d-none d-sm-block">
+                    <div class="search d-none d-sm-block order-2">
                         <dnn:SEARCH ID="dnnSearch" runat="server" ShowSite="false" ShowWeb="false" EnableTheming="true" Submit="Search" CssClass="SearchButton" />
                     </div>
                     <%-- search action for Search function on small devices --%>
                     <a id="search-action" aria-label="Search"></a>
-                    <div id="login" class="float-end">
+                    <div id="login" class="login-wrap flex-grow-1">
                         <dnn:LOGIN ID="dnnLogin" CssClass="LoginLink" runat="server" LegacyMode="false" />
                         <dnn:USER ID="dnnUser" runat="server" LegacyMode="false" />
                     </div>

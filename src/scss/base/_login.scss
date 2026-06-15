@@ -1,27 +1,28 @@
 /*========== LOGIN  ==========*/
-#login {
-    padding-right: 10px;
-	@media only screen and (max-width : 768px){
-		padding-right: 21px;
-	}
+.login-wrap {
+   display:flex;
+   align-items: center;
+   justify-content: flex-end;
 
-	.registerGroup,.registerGroup *,.loginGroup,.loginGroup * {display: block;}
-
+   .loginGroup{
+		order: 2;
+   }
+	
 	.registerGroup,
     .loginGroup {
-        float: right;
+        
         padding: 0;
         margin: 0;
 
 		a {
-			display: block;
+			display: inline-block;
             position: relative;
             height: 34px;
             min-width: 12px;
             padding: 7px 15px 0 15px;
             color: #ffffff;
             font-size: 11px;
-            vertical-align: middle;
+            vertical-align: center;
 
 			&:hover {
 				background: #d7d7d7;
@@ -48,7 +49,7 @@
 
 	.registerGroup {
 		li {
-			float: left;
+			
 			line-height: 1.2em;
 
 			&:first-child:hover {
@@ -57,7 +58,9 @@
 		}
 
 		.buttonGroup {
-            margin-right: 0;
+            margin: 0;
+			padding-left: 0.5em;
+			display:flex;
         }
 
 		.userProfileImg {
