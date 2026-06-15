@@ -3,8 +3,8 @@
   "version": "0.0.2",
   "description": "Xcillion-B5 - DNN theme with Bootstrap 5",
   "scripts": {
-    "start": "gulp --gulpfile _build/gulpfile.js",
-    "build": "gulp build --gulpfile _build/gulpfile.js"
+    "start": "gulp --gulpfile _build/gulpfile.js --cwd .",
+    "build": "gulp build --gulpfile _build/gulpfile.js --cwd ."
   },
   "devDependencies": {
     "del": "^6.1.1",
