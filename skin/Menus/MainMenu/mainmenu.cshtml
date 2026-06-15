@@ -1,7 +1,7 @@
 @using DotNetNuke.Web.DDRMenu;
 @using System.Dynamic;
 @inherits DotNetNuke.Web.Razor.DotNetNukeWebPage<dynamic>
-    
+
 <ul class="navbar-nav ms-auto mt-2 mt-lg-0" id="nav-desktop">
     @RenderPages(Model.Source.root.Children)
 </ul>
@@ -35,13 +35,13 @@
 {
     if (!pages.Any())
     {
-        
+
         return;
     }
 
     foreach (var page in pages)
     {
-        
+
         var hasChildren = page.HasChildren();
         HtmlString attrTarget = Html.Raw(!string.IsNullOrEmpty(page.Target) ? ("target=\"" + page.Target + "\"") : string.Empty);
         HtmlString href = null;
@@ -51,7 +51,7 @@
         if (page.Enabled){
 
             href = Html.Raw(String.Concat("href=\"", page.Url, "\""));
-            
+
         }else{
 
             enabledClass = "disabled";
@@ -70,14 +70,17 @@
            pageNameClass = "page-name-" + getValidClassName(page.Text);
         }
 
-
         var levelClassChild = "nav-wrap-level-" + (page.Depth + 1);
+
+        // Sub-level toggles (depth > 0) use data-bs-display="static" so Popper is
+        // disabled and CSS + JS control the right/left positioning instead.
+        var toggleDisplay = page.Depth > 0 ? "data-bs-display=\"static\"" : "";
 
         <li class='nav-item @levelClass @activeClass @bcClass @pageNameClass'>
                 @if (hasChildren && page.Text.ToLower() != "leden"){
                     <a class="nav-link @levelClass @enabledClass @activeClass @bcClass" @href @attrTarget><span class="link-text">@page.Text</span></a>
-                    
-                    <span class="dropdown-toggle" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" data-bs-reference=".dropdown-menu" aria-haspopup="true" aria-expanded="false"></span>
+
+                    <span class="dropdown-toggle" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" @Html.Raw(toggleDisplay) aria-haspopup="true" aria-expanded="false"></span>
 
                     <ul id="childmenu-@page.TabId" class="dropdown-menu @lastClass @levelClassChild">
                         @RenderPages(page.Children)
@@ -89,6 +92,6 @@
 
         </li>
 
-        
+
     }
 }

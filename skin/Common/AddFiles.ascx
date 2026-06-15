@@ -4,4 +4,4 @@
 
 <%-- JS files --%>
 <dnn:DnnJsInclude ID="BootstrapJS" runat="server" FilePath="vendors/bootstrap/bootstrap.bundle.min.js" PathNameAlias="SkinPath" />
-<dnn:DnnJsInclude ID="scriptJS" runat="server" FilePath="js/scripts.js" PathNameAlias="SkinPath" />
+<dnn:DnnJsInclude ID="scriptJS" runat="server" FilePath="skin.js" PathNameAlias="SkinPath" />

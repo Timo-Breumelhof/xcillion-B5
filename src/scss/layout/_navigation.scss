@@ -12,8 +12,35 @@
 
    
 
+// Mobile: dropdowns flow inline below their parent nav-item
+@media (max-width: 767.98px) {
+    .navbar-collapse .nav-item {
+        flex-wrap: wrap; // Allow dropdown-menu to break onto its own row
+    }
+
+    .navbar-collapse .dropdown-menu {
+        position: static !important;  // Override Popper's inline position:absolute
+        transform: none !important;   // Override Popper's inline transform
+        inset: auto !important;       // Override Popper's inline top/left
+        box-shadow: none;
+        flex-basis: 100%;             // Force full-width row below nav-link + toggle
+        width: 100%;
+    }
+}
+
+// Desktop: sub-menus open to the LEFT of their parent by default.
+// left:auto !important overrides Bootstrap's .dropdown-menu[data-bs-popper] { left:0 }
+@media (min-width: 768px) {
+    .dropdown-menu.nav-wrap-level-2 {
+        top: 0;
+        left: auto !important;
+        right: 100%;
+    }
+}
+
+
 .navbar-nav {
-   
+
     // General styling
    .nav-item{ // Nav item (li)
     position: relative;
@@ -24,12 +51,20 @@
         }
    }
 
-   .nav-link{
-        
+   .nav-link {
+        flex: 1; // Expand to fill nav-item, keeping dropdown-toggle pinned right
+   }
+
+   // Root-level nav links only (not dropdown items)
+   > .nav-item > .nav-link {
+        --bs-nav-link-padding-y: 1rem;
+        --bs-nav-link-padding-x: 1rem;
+        --bs-navbar-nav-link-padding-x: 1rem; // Overrides .navbar-expand-* breakpoint rule
    }
 
    .dropdown-toggle{
         display:inline-block;
+        margin-left: auto;
         line-height: 1.3em;
         width: 1.3em;
         aspect-ratio: 1/1;
@@ -40,7 +75,7 @@
             background: $gray-100;
         }
 
-        // Rotate when opened
+        // Rotate when opened (vertical caret: ▼ → ▲)
         &.show {
             &:after {
                 transform: rotate(180deg);
@@ -48,15 +83,16 @@
             }
         }
 
+        // dropend caret points right (▶) — don't rotate it when open
+        .dropend > &.show {
+            &:after {
+                transform: none;
+            }
+        }
+
    }
 
-    .dropdown-menu {
 
-
-
-        
-
-    }
 }
 
 #dnnMenu .menuItem {
