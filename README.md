@@ -16,6 +16,13 @@ Xcillion-B5 is designed to be used alongside **[Xcillion-B3](https://github.com/
 
 ---
 
+### Changes from Xcillion 3
+
+Please note that this Theme contains only one ascx files and not 4 (Home, inner, admin and 404) as these are not really needed IMO.
+
+default.ascx
+
+
 ### Origin & Background
 
 This project is based on the abandoned repository:
