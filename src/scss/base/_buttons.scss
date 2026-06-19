@@ -1,115 +1,105 @@
 /*==========  BUTTON STYLES  ==========*/
 .buttons-wrapper {
-    text-align: center;
+	text-align: center;
 }
 
 button.cta-button-primary,
 a.cta-button-primary {
-    background: $base_lighter;
-    border: 1px solid $base_lighter;
-    color: #ffffff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: normal;
-    margin: 0 5px 5px 0;
-    min-width: 200px;
-    padding: 10px 0;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
+	background: $base_lighter;
+	border: 1px solid $base_lighter;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: normal;
+	margin: 0 5px 5px 0;
+	min-width: 200px;
+	padding: 10px 0;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
 	@include transition(background-color 300ms ease-out 0s);
 
 	&:hover {
 		background: $buttons_light;
-        border-color: $buttons_light;
+		border-color: $buttons_light;
 	}
 }
 
 button.cta-button,
 a.cta-button {
-    background: none;
-    border: 1px solid $base_lighter;
-    color: $base_lighter;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: normal;
-    margin: 0 5px 5px 0;
-    min-width: 200px;
-    padding: 10px 0;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    @include transition(background-color 300ms ease-out 0s);
+	background: none;
+	border: 1px solid $base_lighter;
+	color: $base_lighter;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: normal;
+	margin: 0 5px 5px 0;
+	min-width: 200px;
+	padding: 10px 0;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	@include transition(background-color 300ms ease-out 0s);
 
 	&:hover {
 		color: #ffffff;
-        background: $base_lighter;
-        border-color: $buttons_light;
+		background: $base_lighter;
+		border-color: $buttons_light;
 	}
 }
 
-.search{
-    position:relative;
-    min-width:35px;
-    width:0%;
-    height:34px;
-    float:right;
-    overflow:hidden;
+.search {
+	position: relative;
+	min-width: 32px;
+	line-height: 32px;
+	width: 0%;
+	height: 32px;
+	overflow: hidden;
 	@include transition(width 0.5s);
 
-	&.search-open{
-		width:25%;
+	> span { // No dnn class for this one..
+		display:flex;
+		align-items: center;
 	}
 
-	&.small-screens {
-		&.search-open{
-			width: 100%;
-			.searchInputContainer {
-				input {
-					padding: 0 124px 0 20px;
-				}
-			}
-		}
+	&.search-open {
+		width: auto;
 	}
+
+
 }
 
 .searchInputContainer {
-	display: block!important;
-	input{
-		top:0;
-		right:0;
-		border:0;
-		outline:0;
-		background:#dcddd8;
-		width:auto;
-		height:34px;
-		margin:0;
-		padding:0 52px 0 20px;
-		font-size:15px;
+	display: inline-block !important;
 
-		&::-webkit-input-placeholder {
-			color: #818181;
-		}
-		&:-moz-placeholder {
-			color: #818181;
-		}
-		&::-moz-placeholder {
-			color: #818181;
-		}
-		&:-ms-input-placeholder {
+	input {
+		display: inline-block;
+		vertical-align: top;
+		border: 0;
+		outline: 0;
+		background: #dcddd8;
+		width: auto;
+		line-height: 34px;
+		margin: 0;
+		padding: 0 16px;
+		font-size: 0.7em;
+
+		&::placeholder {
 			color: #818181;
 		}
 	}
+
 	a.dnnSearchBoxClearText {
 		right: 45px !important;
+
 		&.dnnShow {
 			bottom: 2px;
 		}
@@ -121,21 +111,21 @@ a.cta-button {
 .search-toggle-icon,
 #search-action {
 	background: url("#{$path-img}/search.png") no-repeat scroll center center #C3C1C1;
-    width:34px;
-    height:34px;
-    display:block;
-    position:absolute;
-    top:0;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size:22px;
-    right:0;
-    padding:0;
-    margin:0;
-    outline:0;
-    line-height:50px;
-    text-align:center;
-    cursor:pointer;
-    color:#dcddd8;
+	width: 34px;
+	height: 34px;
+	display: block;
+	position: absolute;
+	top: 0;
+
+	font-size: 22px;
+	right: 0;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	line-height: 34px;
+	text-align: center;
+	cursor: pointer;
+	color: #dcddd8;
 	text-indent: -9999px;
 }
 
@@ -153,9 +143,11 @@ a.cta-button {
 		height: auto;
 		padding: 15px 0 15px;
 	}
+
 	span {
-		display: inline!important;
+		display: inline !important;
 	}
+
 	input {
 		background: #fff none repeat scroll 0 0;
 		border: medium none;
@@ -164,6 +156,7 @@ a.cta-button {
 		margin: 0 0 0 15px;
 		width: 70%;
 	}
+
 	a.SearchButton {
 		background: url("#{$path-img}/search.png") no-repeat scroll center center #e0dfdf;
 		height: 46px;
@@ -185,7 +178,7 @@ a.cta-button {
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px){
+@media only screen and (max-width : 768px) {
 	#search-action {
 		display: block;
 	}

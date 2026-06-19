@@ -1,33 +1,35 @@
 /*========== LOGIN  ==========*/
 .login-wrap {
-   display:flex;
-   align-items: center;
-   justify-content: flex-end;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 
-   .loginGroup{
+	.loginGroup {
 		order: 2;
-   }
-	
+	}
+
 	.registerGroup,
-    .loginGroup {
-        
-        padding: 0;
-        margin: 0;
+	.userDisplayName,
+	.loginGroup {
+
+		padding: 0;
+		margin: 0;
 
 		a {
 			display: inline-block;
-            position: relative;
-            height: 34px;
-            min-width: 12px;
-            padding: 7px 15px 0 15px;
-            color: #ffffff;
-            font-size: 11px;
-            vertical-align: center;
+			position: relative;
+			height: 34px;
+			line-height: 34px;
+			min-width: 12px;
+			padding: 0 15px 0 15px;
+			color: #ffffff;
+			font-size: 11px;
+			vertical-align: center;
 
 			&:hover {
 				background: #d7d7d7;
-                color: $login_color;
-                text-decoration: none;
+				color: $login_color;
+				text-decoration: none;
 			}
 
 			&:active {
@@ -36,20 +38,20 @@
 
 			strong {
 				display: block;
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                overflow: hidden;
-                font-size: 11px;
-                text-indent: -9999px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				overflow: hidden;
+				font-size: 11px;
+				text-indent: -9999px;
 			}
 		}
-    }
+	}
 
 	.registerGroup {
 		li {
-			
+
 			line-height: 1.2em;
 
 			&:first-child:hover {
@@ -58,10 +60,10 @@
 		}
 
 		.buttonGroup {
-            margin: 0;
+			margin: 0;
 			padding-left: 0.5em;
-			display:flex;
-        }
+			display: flex;
+		}
 
 		.userProfileImg {
 			a {
@@ -80,13 +82,14 @@
 				top: -9px;
 				min-width: 7px;
 				margin-right: 3px;
-				background: rgb(59,150,182);
+				background: rgb(59, 150, 182);
 				text-align: center;
 				font-size: 11px;
 				color: #ffffff;
 				-webkit-text-shadow: 0px 1px 0px #333333;
 				text-shadow: 0px 1px 0px #333333;
 			}
+
 			img {
 				height: 32px;
 				width: 32px;
@@ -100,19 +103,23 @@
 		border-right: 1px solid #ccc;
 
 		strong {
-            height: 100%;
-            background: url('#{$path-img}/notification_icon.png') no-repeat center center;
-        }
+			height: 100%;
+			background: url('#{$path-img}/notification_icon.png') no-repeat center center;
+		}
 	}
+
 	.userMessages {
 		strong {
 			height: 100%;
 			background: url('#{$path-img}/message_icon.png') no-repeat center center;
 		}
 	}
-	.userMessages, .userNotifications {
+
+	.userMessages,
+	.userNotifications {
 		a {
 			padding: 0 18px;
+
 			span {
 				display: inline-block;
 				margin-top: 9px;
@@ -124,14 +131,16 @@
 	}
 }
 
-#UserProfileImg {
-    margin-bottom: 15px;
+.userProfileImg {
+	img{
+		vertical-align: top;
+	}
 }
 
 .UserProfileControls ul {
-    margin-left: 0;
+	margin-left: 0;
 
-    li {
-        display: inline-block;
-    }
+	li {
+		display: inline-block;
+	}
 }
