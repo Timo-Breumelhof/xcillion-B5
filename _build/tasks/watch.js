@@ -31,8 +31,8 @@ function watchFiles() {
   containerWatcher.on('change', series(buildContainersToDist, cleanContainers, distributeContainers));
   containerWatcher.on('unlink', mirrorUnlink('container', distContainerPath(), cleanContainers, distributeContainers));
 
-  watch(['src/scss/**/*.scss', '_base/scss/**/*.scss'], series(buildScss, distributeCss));
-  watch(['src/less/**/*.less', '_base/less/**/*.less'], series(buildLess, distributeCss));
+  watch(['src/scss/**/*.scss', '_dnn-base/scss/**/*.scss'], series(buildScss, distributeCss));
+  watch(['src/less/**/*.less', '_dnn-base/less/**/*.less'], series(buildLess, distributeCss));
   watch('src/js/**/*.js', series(buildJs, distributeJs));
   watch('vendors/**/*', series(copyVendors, distributeVendors));
 }
