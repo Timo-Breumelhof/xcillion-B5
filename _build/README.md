@@ -159,6 +159,8 @@ If `jsFiles` is not specified, all files in `src/js/**/*.js` will be included (t
 
 All options can be set in `config.json` (base) or overridden in `config-local.json`.
 
+> **Note:** The `name` field in `package.json` is intentionally set to `dnn-theme` across all themes and has no effect on the build output. The theme output folder name is controlled by `themeName` here, not by `package.json`.
+
 | Option | Default | Description |
 |---|---|---|
 | `themeName` | — | Name of the theme; used as the output folder name |
