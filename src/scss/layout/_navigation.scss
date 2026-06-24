@@ -1,115 +1,198 @@
-/*========== MAIN NAVIGATION  ==========*/
+// Navigation variables — move to _variables.scss once a central file is in place
+$nav-link-color: $body-color !default;
+$navbar-active-color: $primary !default;
+$navbar-active-color-mob: $primary !default;
+$navbar-hover-color: $primary !default;
+$navbar-nav-link-padding-x: 0.5rem !default;
+$navbar-toggle-color: $gray-300 !default;
 
+$nav-llv-0-font-size: 1em !default;
+$nav-llv-0-font-weight: bold !default;
+$nav-lvl-0-pad-x: 0.8em !default;
+$nav-lvl-0-pad-y: 1em !default;
+$nav-llv-0-item-border-col-mob: $gray-700 !default;
+$nav-llv-0-item-border-mob: solid 1px $nav-llv-0-item-border-col-mob !default;
+$nav-llv-0-item-border-desk: none !default;
+
+$nav-dd-toggle-col: $gray-600 !default;
+$nav-dd-toggle-bg: none !default;
+$nav-dd-toggle-col-hover: $white !default;
+$nav-dd-toggle-bg-hover: $secondary !default;
+
+$dropdown-border-color: $primary !default;
+$dropdown-item-border-color: $primary !default;
+
+// Nav Bar
+
+.nav-dropdown-open {
+    .skin-header {
+        @include media-breakpoint-up(lg) {
+            // > .container { }
+        }
+    }
+    .sticky-top {
+        position: relative !important;
+    }
+}
+
+// Dropdown toggle
+.show.dropdown-toggle:after {
+    transform: rotate(180deg);
+    transition: all 0.3s;
+}
+
+// Menu styling
 .navbar {
+    padding: 0;
+    align-items: center;
+    height: 100%;
+}
 
-    .navbar-nav {
-        li {
-            list-style-type: none; // Overrule DNN default.css for ul li
+// Wrapper for the nav bar, white on mobile, grey on desktop
+.navbar-wrap {
+
+    @include media-breakpoint-up(lg) {
+        background: none;
+    }
+    .nav-dropdown-open & {
+        margin-bottom: 2em;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
         }
     }
 }
-
-
-   
-
-// Mobile: dropdowns flow inline below their parent nav-item
-@media (max-width: 767.98px) {
-    .navbar-collapse .nav-item {
-        flex-wrap: wrap; // Allow dropdown-menu to break onto its own row
-    }
-
-    .navbar-collapse .dropdown-menu {
-        position: static !important;  // Override Popper's inline position:absolute
-        transform: none !important;   // Override Popper's inline transform
-        inset: auto !important;       // Override Popper's inline top/left
-        box-shadow: none;
-        flex-basis: 100%;             // Force full-width row below nav-link + toggle
-        width: 100%;
-    }
-}
-
-// Desktop: sub-menus open to the LEFT of their parent by default.
-// left:auto !important overrides Bootstrap's .dropdown-menu[data-bs-popper] { left:0 }
-@media (min-width: 768px) {
-    .dropdown-menu.nav-wrap-level-2 {
-        top: 0;
-        left: auto !important;
-        right: 100%;
-    }
-}
-
 
 .navbar-nav {
+    --bs-navbar-active-color: $navbar-active-color;
+    --bs-navbar-nav-link-padding-x: $navbar-nav-link-padding-x;
 
-    // General styling
-   .nav-item{ // Nav item (li)
-    position: relative;
-        display:flex;
-        align-items:center;
-        &.active{
-            background: $gray-200;
-        }
-   }
+    flex-wrap: wrap;
+    background: $white;
+    @include media-breakpoint-up(lg) {
+        background: none;
+    }
 
-   .nav-link {
-        flex: 1; // Expand to fill nav-item, keeping dropdown-toggle pinned right
-   }
+    li {
+        list-style-type: none;
+    }
 
-   // Root-level nav links only (not dropdown items)
-   > .nav-item > .nav-link {
-        --bs-nav-link-padding-y: 1rem;
-        --bs-nav-link-padding-x: 1rem;
-        --bs-navbar-nav-link-padding-x: 1rem; // Overrides .navbar-expand-* breakpoint rule
-   }
+    .nav-item {
+        position: relative;
+        padding: $nav-lvl-0-pad-y (2 * $nav-lvl-0-pad-y);
+        font-weight: $nav-llv-0-font-weight;
+        border-bottom: $nav-llv-0-item-border-mob;
 
-   .dropdown-toggle{
-        display:inline-block;
-        margin-left: auto;
-        line-height: 1.3em;
-        width: 1.3em;
-        aspect-ratio: 1/1;
-        text-align:center;
-        border-radius: 50%;
-
-        &:hover{
-            background: $gray-100;
+        &:last-child {
+            border: none;
         }
 
-        // Rotate when opened (vertical caret: ▼ → ▲)
-        &.show {
-            &:after {
-                transform: rotate(180deg);
-                transition: all 0.3s;
+        @include media-breakpoint-up(lg) {
+            padding: (2 * $nav-lvl-0-pad-y) 0 (2 * $nav-lvl-0-pad-y) (2 * $nav-lvl-0-pad-x);
+        }
+
+        &.nav-level-0 {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: $nav-llv-0-font-size;
+
+            @include media-breakpoint-up(lg) {
+                border-bottom: $nav-llv-0-item-border-desk;
             }
         }
 
-        // dropend caret points right (▶) — don't rotate it when open
-        .dropend > &.show {
-            &:after {
-                transform: none;
+        .nav-link {
+            color: $nav-link-color;
+            display: flex;
+            align-items: center;
+
+            @include media-breakpoint-up(lg) {
+                padding: 0;
+                border-bottom: solid 2px transparent;
+            }
+
+            .link-text {
+                flex-grow: 2;
+            }
+
+            &:hover {
+                color: $navbar-hover-color;
+            }
+
+            &.active, &.active-parent {
+                color: $navbar-active-color-mob;
+                @include media-breakpoint-up(lg) {
+                    border-bottom: solid 2px $navbar-active-color;
+                }
             }
         }
 
-   }
+        .dropdown-toggle {
+            color: $nav-dd-toggle-col;
+            background: $nav-dd-toggle-bg;
+            line-height: 1.3em;
+            padding-top: 0.2em;
+            width: 1.5em;
+            text-align: center;
+            margin-left: 0.3em;
+            border-radius: 50%;
 
+            &:hover {
+                color: $nav-dd-toggle-col-hover;
+                background: $nav-dd-toggle-bg-hover;
+            }
+        }
 
+        .dropdown-menu {
+            --bs-dropdown-bg: #{$dropdown-bg};
+            --bs-dropdown-border-width: 1px;
+            --bs-dropdown-border-color: #{$dropdown-border-color};
+            --bs-dropdown-padding-y: 0;
+
+            width: 100%;
+            right: 0;
+            left: auto;
+
+            @include media-breakpoint-up(lg) {
+                min-width: 300px;
+                // &:before { ... } // top arrow placeholder
+            }
+
+            &.show {
+                margin: 0.5em 0;
+                @include media-breakpoint-up(lg) {
+                    margin: 0;
+                }
+            }
+
+            .nav-item { // Level 1+
+                padding: 0 0.7em;
+
+                .nav-link {
+                    padding: 1em 0.5em;
+                    border-bottom: solid 1px $dropdown-item-border-color;
+
+                    &.active .link-text {
+                        display: inline;
+                        flex-grow: 0;
+                    }
+                }
+
+                &:last-child .nav-link {
+                    border: none;
+                }
+            }
+        }
+    }
 }
 
-#dnnMenu .menuItem {
-    word-wrap: break-word;
-
-    @media (min-width: 768px) { max-width: 720px; }
-    @media (min-width: 992px) { max-width: 940px; }
-    @media (min-width: 1200px) { max-width: 1138px; }
-}
-
-$navbar-toggle-color: #f00;
 // Nav Bar Toggler
 .navbar-toggler {
     --bs-navbar-color: #{$navbar-toggle-color};
-    --bs-navbar-toggler-padding-y: 0.3em;
-    --bs-navbar-toggler-padding-x: 0.3em;
+    --bs-navbar-toggler-padding-y: 0.1em;
+    --bs-navbar-toggler-padding-x: 0.1em;
     --bs-navbar-toggler-border-color: transparent;
-    --bs-navbar-toggler-border-radius: 50%;
-    font-size: 2em;
+    --bs-navbar-toggler-border-radius: 3px;
+    font-size: 1.2em;
 }
