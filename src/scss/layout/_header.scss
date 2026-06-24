@@ -15,8 +15,13 @@ header {
 	border-bottom: 1px solid #91AFCA;
 }
 
+.brand{
+    display: inline-block;
+    max-width: 5.5em;
+}
+
 #mainHeader-inner {
-    padding: 30px 0;
+    padding: 1em 0;
 }
 
 #mainHeader-border {
