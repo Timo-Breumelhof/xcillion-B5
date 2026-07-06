@@ -12,9 +12,7 @@ html {
 body {
   font-size: 1rem; // default
 
-  @media screen and (min-width: 1600px) {
-    font-size: 22px; // large screen readability boost (does not affect rem)
-  }
+
 }
 
 h1 {
