@@ -1,0 +1,16 @@
+// COLORS
+// --------------------------------------------------
+// Gray scale — overrides Bootstrap's $gray-100..$gray-900
+// (must be imported before the Bootstrap import in skin.scss)
+// Values are neutral (R=G=B), matching the theme's existing palette
+// (Bootstrap's own defaults carry a slight cool/blue tint).
+
+$gray-100: #f0f0f0;
+$gray-200: #e3e3e3;
+$gray-300: #d2d2d2;
+$gray-400: #a3a3a3;
+$gray-500: #737373;
+$gray-600: #626262;
+$gray-700: #383838;
+$gray-800: #333333;
+$gray-900: #232323;
