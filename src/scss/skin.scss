@@ -5,7 +5,7 @@
   // Fonts
 // ----------------------------------------------------------------------
 
-@import "base/fonts";
+@import "parts/fonts";
 
 
 
@@ -18,23 +18,24 @@
 // ----------------------------------------------------------------------
   // Base
 // ----------------------------------------------------------------------
-@import "base/variables";
-@import "base/mixins";
+@import "variables/colors";
+@import "variables/variables";
+@import "parts/mixins";
 
 // ----------------------------------------------------------------------
   // Bootstrap 5
 // ----------------------------------------------------------------------
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-@import "reset";
+
 @import "text";
 
-@import "base/headings";
-@import "base/buttons";
-@import "base/tabs";
-@import "base/language";
-@import "base/login";
-@import "base/extends";
+@import "parts/headings";
+@import "parts/buttons";
+@import "parts/tabs";
+@import "parts/language";
+@import "parts/login";
+@import "parts/extends";
 
 
 

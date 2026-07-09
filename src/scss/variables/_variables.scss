@@ -1,0 +1,38 @@
+// VARIABLES
+// --------------------------------------------------
+
+$body_color: $gray-800;
+
+$base_light: #f0f0f0;
+$base_dark: #383838;
+$buttons_light: #91afca;
+$base_lighter: #7ca0c0;
+$breadcrumb_color: $gray-600;
+$contact_light: $gray-200;
+$login_color: $gray-800;
+$header_color: #020202;
+$news_content_light: $gray-500;
+$news_content_dark: $gray-900;
+$footer_color_links: $gray-300;
+$footer_light: $gray-300;
+
+// Colors
+$primary: #007aa7;
+$secondary: #445c66;
+
+$path-img: 'images';
+
+$headings: h1, h2, h3, h4, h5, h6;
+
+// Set general Bootstrap radius
+$border-radius: 3px;
+$border-radius-sm: 3px;
+$border-radius-lg: 3px;
+$border-radius-xl: 3px;
+$border-radius-xxl: 3px;
+$border-radius-pill: 3px;
+
+// Dropdown menu
+$dropdown-padding-y: 0;
+$dropdown-border-radius: 0;
+
