@@ -48,11 +48,10 @@ $menu-dropdown-border-color: $primary !default;
 
 .navbar-nav {
     flex-wrap: wrap;
-    background: $gray-100;
+    border-top: solid 1px $gray-300;
 
     @include media-breakpoint-up(md) {
-        background: none;
-        margin-top: 0;
+        border-top: none;
     }
 
 
@@ -90,12 +89,35 @@ $menu-dropdown-border-color: $primary !default;
         &.active,
         &.active-parent {
             background: $gray-100;
+
+            &.nav-level-0 {
+                border-left: solid 4px $gray-400;
+            }
+
+             &.active {
+                border-left-color: $primary;
+            }
+        }
+
+
+        @include media-breakpoint-up(md) {
+
+            &.active,
+            &.active-parent {
+                border-left: solid 4px $gray-400;
+                 &.nav-level-0 {
+                border-left: none;
+                }
+            }
+
+           
+
         }
 
 
 
         // Styling
-        border-bottom: solid 1px #ddd;
+        border-bottom: solid 1px $gray-300;
 
         &.nav-level-0 {
             display: flex;
@@ -112,7 +134,7 @@ $menu-dropdown-border-color: $primary !default;
         .nav-link {
             flex-grow: 1;
 
-            &.active{
+            &.active {
                 color: $primary;
             }
 
