@@ -1,6 +1,11 @@
 /*==========  BREADCRUMBS  ==========*/
-#breadcrumb {
-	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+.skin-breadcrumb {
+
+	// Hide if no breadcrumb
+	&:has( > span:empty){
+		display:none;
+	}
+	
 	border-radius: 0px;
 
 	-moz-box-shadow: none;
@@ -17,20 +22,20 @@
 
 	a {
 		margin-left: 10px;
+		display:inline-block;
 		font-weight: 600;
 		font-size: 11px;
 		color: $breadcrumb_color;
 
 		&:first-child {
-			font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-            font-size: 11px !important;
+			
+            font-size: 12px !important;
             font-weight: 400;
             color: #7b7d82;
-            margin: 0;
 		}
 	}
 
-	img, span {
+	img {
 		margin-left: 10px;
 	}
 

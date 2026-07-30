@@ -80,7 +80,7 @@
             <div class="row dnnpane">
                 <div id="HeaderPane" class="col-md-12 headerPane" runat="server"></div>
             </div>
-            <div id="breadcrumb" class="col-md-12">
+            <div id="breadcrumb" class="skin-breadcrumb col-md-12">
                 <dnn:BREADCRUMB ID="dnnBreadcrumb" runat="server" CssClass="breadcrumbLink" RootLevel="0" Separator="&lt;img src=&quot;/Portals/_default/Skins/Xcillion/Images/breadcrumb-arrow.png&quot; alt=&quot;breadcrumb separator&quot;&gt;" HideWithNoBreadCrumb="true" />
             </div>
             <div id="mainContent-inner">
