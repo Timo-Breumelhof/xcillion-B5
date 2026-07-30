@@ -1,32 +1,17 @@
 // Navigation variables — move to _variables.scss once a central file is in place
-$navbar-link-color: $gray-900 !default;
-$navbar-hover-color: $primary !default;
-$navbar-active-color: $primary !default;
 $navbar-toggle-color: $gray-300 !default;
+$navbar-active-color: $primary !default;
 
-// Mobile nav only — below the navbar-expand-md breakpoint (see .navbar-expand-md
-// in default.ascx). Desktop keeps the $navbar-* variables above unchanged.
-$navbar-mobile-bg: $gray-800 !default;
-$navbar-mobile-color: $gray-100 !default;
-$navbar-mobile-hover-color: $white !default;
-$navbar-mobile-active-color: $white !default;
-$navbar-mobile-active-bg: $gray-700 !default;
+$nav-border: solid 1px $gray-300 !default;
+$nav-active-bg: $gray-100 !default;
+$nav-active-border: solid 4px $gray-400 !default;
+
 $nav-mobile-level-pad-x: 1em !default; // extra right padding added per nesting level
-
-$nav-llv-0-font-size: 1em !default;
-$nav-llv-0-font-weight: normal !default;
-$nav-lvl-0-pad-x: 0.6em !default;
-$nav-lvl-0-pad-y: 0.8em !default;
-$nav-llv-0-item-border-col-mob: $gray-700 !default;
-$nav-llv-0-item-border-mob: solid 1px $nav-llv-0-item-border-col-mob !default;
-$nav-llv-0-item-border-desk: none !default;
 
 $nav-dd-toggle-col: $gray-600 !default;
 $nav-dd-toggle-bg: none !default;
 $nav-dd-toggle-col-hover: $white !default;
 $nav-dd-toggle-bg-hover: $secondary !default;
-
-$menu-dropdown-border-color: $primary !default;
 
 // Nav Bar
 // With a sticky header, there is an issue with  
@@ -48,7 +33,7 @@ $menu-dropdown-border-color: $primary !default;
 
 .navbar-nav {
     flex-wrap: wrap;
-    border-top: solid 1px $gray-300;
+    border-top: $nav-border;
 
     @include media-breakpoint-up(md) {
         border-top: none;
@@ -88,14 +73,14 @@ $menu-dropdown-border-color: $primary !default;
         // Active styling
         &.active,
         &.active-parent {
-            background: $gray-100;
+            background: $nav-active-bg;
 
             &.nav-level-0 {
-                border-left: solid 4px $gray-400;
+                border-left: $nav-active-border;
             }
 
              &.active {
-                border-left-color: $primary;
+                border-left-color: $navbar-active-color;
             }
         }
 
@@ -104,7 +89,7 @@ $menu-dropdown-border-color: $primary !default;
 
             &.active,
             &.active-parent {
-                border-left: solid 4px $gray-400;
+                border-left: $nav-active-border;
                  &.nav-level-0 {
                 border-left: none;
                 }
@@ -117,7 +102,7 @@ $menu-dropdown-border-color: $primary !default;
 
 
         // Styling
-        border-bottom: solid 1px $gray-300;
+        border-bottom: $nav-border;
 
         &.nav-level-0 {
             display: flex;
@@ -135,7 +120,7 @@ $menu-dropdown-border-color: $primary !default;
             flex-grow: 1;
 
             &.active {
-                color: $primary;
+                color: $navbar-active-color;
             }
 
 
