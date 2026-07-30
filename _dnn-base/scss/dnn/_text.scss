@@ -18,6 +18,11 @@ h1,h2,h3,h4,h5,h6 // lines 122-177
     line-height: normal;
 }
 
+a{
+    &:link, &:visited{
+        color: unset;
+    }
+}
 
 .Head { // Lines 179-183
     display: inline-block;

@@ -2,7 +2,7 @@
 @using System.Dynamic;
 @inherits DotNetNuke.Web.Razor.DotNetNukeWebPage<dynamic>
 
-<ul class="navbar-nav ms-auto mt-2 mt-lg-0" id="nav-desktop">
+<ul class="navbar-nav ms-auto mt-4 mt-lg-0" id="nav-main">
     @RenderPages(Model.Source.root.Children)
 </ul>
 
@@ -59,9 +59,8 @@
         }
 
 
-        var lastClass = page.Last ? "dropdown-menu-end" : null;
-        var bcClass = page.Breadcrumb && !page.Selected ? " active-parent" : null;
-        var activeClass= page.Selected ? " active" : null;
+        var isActive = page.Selected;
+        var isActiveParent = page.Breadcrumb && !page.Selected;
         var levelClass = "nav-level-" + page.Depth;
 
         var pageNameClass = "";
@@ -71,25 +70,52 @@
         }
 
         var levelClassChild = "nav-wrap-level-" + (page.Depth + 1);
+        var childMenuId = "childmenu-" + page.TabId;
 
-        // Sub-level toggles (depth > 0) use data-bs-display="static" so Popper is
-        // disabled and CSS + JS control the right/left positioning instead.
-        var toggleDisplay = page.Depth > 0 ? "data-bs-display=\"static\"" : "";
+        // Build each class attribute as a single precomputed string rather than
+        // interpolating loose loop variables inline — @helper output is lazily
+        // evaluated, and multi-expression attributes referencing per-iteration
+        // locals directly can end up reflecting the wrong node once recursion
+        // defers the actual write.
+        var liClasses = new List<string> { "nav-item-li", levelClass };
+        if (isActive) { liClasses.Add("active"); }
+        if (isActiveParent) { liClasses.Add("active-parent"); }
+        if (!string.IsNullOrEmpty(pageNameClass)) { liClasses.Add(pageNameClass); }
+        var liClassAttr = Html.Raw("class=\"" + String.Join(" ", liClasses) + "\"");
 
-        <li class='nav-item @levelClass @activeClass @bcClass @pageNameClass'>
-                @if (hasChildren && page.Text.ToLower() != "leden"){
-                    <a class="nav-link @levelClass @enabledClass @activeClass @bcClass" @href @attrTarget><span class="link-text">@page.Text</span></a>
+        var linkClasses = new List<string> { "nav-link", levelClass };
+        if (!string.IsNullOrEmpty(enabledClass)) { linkClasses.Add(enabledClass); }
+        if (isActive) { linkClasses.Add("active"); }
+        if (isActiveParent) { linkClasses.Add("active-parent"); }
+        var linkClassAttr = Html.Raw("class=\"" + String.Join(" ", linkClasses) + "\"");
 
-                    <span class="dropdown-toggle" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" @Html.Raw(toggleDisplay) aria-haspopup="true" aria-expanded="false"></span>
+        var itemClasses = new List<string> { "nav-item", levelClass };
+        if (!string.IsNullOrEmpty(enabledClass)) { itemClasses.Add(enabledClass); }
+        if (isActive) { itemClasses.Add("active"); }
+        if (isActiveParent) { itemClasses.Add("active-parent"); }
+        var itemClassAttr = Html.Raw("class=\"" + String.Join(" ", itemClasses) + "\"");
 
-                    <ul id="childmenu-@page.TabId" class="dropdown-menu @lastClass @levelClassChild">
-                        @RenderPages(page.Children)
-                    </ul>
-                }else{
-                     <a class="nav-link @levelClass @enabledClass @activeClass @bcClass" @href @attrTarget><span class="link-text">@page.Text</span></a>
+        // "collapse" (toggled by id via data-bs-target) rather than Bootstrap's
+        // "dropdown" component, since dropdown requires the toggle and menu to
+        // be DOM siblings, which conflicts with the flex row wrapping the link
+        // and toggle icon. Collapse has no such requirement.
+        var ulClasses = new List<string> { "dropdown-menu", "collapse" };
+        if (page.Last) { ulClasses.Add("dropdown-menu-end"); }
+        ulClasses.Add(levelClassChild);
+        var ulClassAttr = Html.Raw("class=\"" + String.Join(" ", ulClasses) + "\"");
+
+        <li @liClassAttr>
+                <div @itemClassAttr>
+                    <a @linkClassAttr @href @attrTarget><span class="link-text">@page.Text</span></a>
+                    @if (hasChildren){
+                    <span class="dropdown-toggle" role="button" data-bs-toggle="collapse" data-bs-target="#@childMenuId" aria-controls="@childMenuId" aria-expanded="false"></span>
+                    }
+                </div>
+                @if (hasChildren){
+                <ul id="@childMenuId" @ulClassAttr>
+                    @RenderPages(page.Children)
+                </ul>
                 }
-
-
         </li>
 
 

@@ -13,6 +13,7 @@ header {
     // background: $base_lighter;
 	background: #ffffff;
 	border-bottom: 1px solid #91AFCA;
+    padding: 1em 0;
 }
 
 .brand{
@@ -29,6 +30,15 @@ header {
     height:5px;
 }
 
-#logo {
-    padding-left: 15px;
+
+.navbar {
+    align-items: center;
+    height: 100%;
+
+    // Bootstrap's navbar-expand-md sets justify-content: flex-start at the
+    // md breakpoint, which pulls the menu right up against the logo —
+    // override so it stays pinned to the right instead.
+    @include media-breakpoint-up(md) {
+        justify-content: space-between;
+    }
 }

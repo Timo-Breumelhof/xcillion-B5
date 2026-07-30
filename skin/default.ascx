@@ -52,19 +52,21 @@
 
     <!--Header -->
     <header role="banner">
-        <div id="mainHeader-inner" class="container">
+        <div class="container px-0 px-md-3">
             <div class="navbar navbar-expand-md" role="navigation">
-                <div id="navbar-top-wrapper">
+                <div id="navbar-top-wrapper" class="ps-3 ps-md-0    ">
                     <div id="logo">
                         <span class="brand">
                             <dnn:LOGO runat="server" ID="dnnLOGO" />
                         </span>
                     </div>
                 </div>
+                <div class="nav-toggle-wrap pe-3">
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
                     <span class="visually-hidden">Toggle navigation</span>
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <dnn:MENU ID="MENU" MenuStyle="menus/mainmenu" runat="server" NodeSelector="*"></dnn:MENU>
                 </div>
