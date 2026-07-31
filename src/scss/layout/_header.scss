@@ -16,9 +16,22 @@ header {
     padding: 1em 0;
 }
 
-.brand{
+.logo{
     display: inline-block;
     max-width: 8em;
+    
+    // scale logo on small devices
+    img{
+        max-height: 2em;
+    }
+
+    @include media-breakpoint-up(md) {
+        max-height:unset;
+        img{
+            max-height:none;
+        }
+    }
+
 }
 
 #mainHeader-inner {

@@ -18,11 +18,12 @@
 
 
       img {
-        height: 0.7em;
+        height: 1em;
         width: auto;
-        opacity: 0.5;
+        opacity: 0.7;
         vertical-align: center;
-        outline: solid 1px #ffffff44
+        border: solid 1px #ffffff22;
+        outline: none;
       }
 
       &:hover img {
@@ -34,9 +35,7 @@
 
     .Language.selected img {
       opacity: 1;
-      border-color: #222;
-      border-radius: 2px;
-      box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
+      border-color: $primary;
     }
   }
 }

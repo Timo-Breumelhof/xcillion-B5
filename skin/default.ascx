@@ -21,30 +21,22 @@
 
 <div id="siteWrapper">
 
-    <!-- UserControlPanel  -->
+
     <div id="topHeader">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <div id="search-top" class="small-screens d-sm-none">
-                        <dnn:SEARCH ID="dnnSearch2" runat="server" ShowSite="false" ShowWeb="false" EnableTheming="true" Submit="Search" CssClass="SearchButton" />
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 d-flex">
+                <div class="col-md-12 d-flex flex-wrap">
                     <div class="language">
                         <dnn:LANGUAGE runat="server" ID="LANGUAGE1" ShowMenu="False" ShowLinks="True" />
                     </div>
-                    <div class="search d-none d-sm-block order-2">
-                        <dnn:SEARCH ID="dnnSearch" runat="server" ShowSite="false" ShowWeb="false" EnableTheming="true" Submit="Search" CssClass="SearchButton" />
-                    </div>
-                    <%-- search action for Search function on small devices --%>
-                    <a id="search-action" aria-label="Search"></a>
                     <div id="login" class="login-wrap flex-grow-1">
                         <dnn:LOGIN ID="dnnLogin" CssClass="LoginLink" runat="server" LegacyMode="false" />
                         <dnn:USER ID="dnnUser" runat="server" LegacyMode="false" />
                     </div>
+                    <div class="search">
+                        <dnn:SEARCH ID="dnnSearch" runat="server" ShowSite="false" ShowWeb="false" EnableTheming="true" Submit="Search" CssClass="SearchButton" />
+                    </div>
+                    <a id="search-action" class="d-none search-icon" aria-label="Search">Search</a>
                 </div>
             </div>
         </div>
@@ -55,10 +47,10 @@
         <div class="container px-0 px-md-3">
             <div class="navbar navbar-expand-md" role="navigation">
                 <div id="navbar-top-wrapper" class="ps-3 ps-md-0    ">
-                    <div id="logo">
-                        <span class="brand">
-                            <dnn:LOGO runat="server" ID="dnnLOGO" />
-                        </span>
+                    <div class="logo">
+                        
+                            <dnn:LOGO runat="server" class="logo-link" ID="dnnLOGO" />
+
                     </div>
                 </div>
                 <div class="nav-toggle-wrap pe-3">
@@ -107,13 +99,11 @@
                 <div class="row dnnpane">
                     <div id="ContentPaneLower" class="col-md-12 contentPane spacingTop" runat="server"></div>
                 </div>
-            </div><!-- /.mainContent-inner -->
+            </div>
         </main>
-        <!-- /.mainContent -->
+       
     </div>
-    <!-- /.container -->
 
-    <!-- Footer -->
     <footer role="contentinfo">
         <div class="footer-above">
             <div class="container">
@@ -146,7 +136,7 @@
     </footer>
 
 </div>
-<!-- /.SiteWrapper -->
+
 
 <%-- CSS & JS includes --%>
 <!--#include file="Common/AddFiles.ascx"-->
