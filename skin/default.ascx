@@ -68,46 +68,66 @@
 
     <!-- Page Content -->
     <div class="container">
-        <main role="main">
-            <div class="row dnnpane">
-                <div id="HeaderPane" class="col-md-12 headerPane" runat="server"></div>
+        <main role="main" class="panes">
+            <div class="row pane">
+                <div class="col-md-12">
+                    <div id="HeaderPane" class="headerPane" runat="server"></div>
+                </div>
             </div>
             <div id="breadcrumb" class="skin-breadcrumb col-md-12">
                 <dnn:BREADCRUMB ID="dnnBreadcrumb" runat="server" CssClass="breadcrumbLink" RootLevel="0" Separator="&lt;img src=&quot;/Portals/_default/Skins/Xcillion/Images/breadcrumb-arrow.png&quot; alt=&quot;breadcrumb separator&quot;&gt;" HideWithNoBreadCrumb="true" />
             </div>
             <div id="mainContent-inner">
-                <div class="row dnnpane">
-                    <div id="ContentPane" class="col-md-12 contentPane" runat="server"></div>
+                <div class="row pane-set">
+                    <div class="col-md-12">
+                        <div id="ContentPane" class="contentPane" runat="server"></div>
+                    </div>
                 </div>
 
-                <div class="row dnnpane">
-                    <div id="P1_75_1" class="col-md-8 leftPane spacingTop" runat="server"></div>
-                    <div id="P1_25_2" class="col-md-4 rightPane spacingTop" runat="server"></div>
+                <div class="row pane-set">
+                    <div class="col-md-8">
+                        <div id="P1_75_1" class="leftPane spacingTop" runat="server"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="P1_25_2" class="rightPane spacingTop" runat="server"></div>
+                    </div>
                 </div>
 
-                <div class="row dnnpane">
-                    <div id="P2_25_1" class="col-md-4 spacingTop" runat="server"></div>
-                    <div id="P2_75_2" class="col-md-8 spacingTop" runat="server"></div>
+                <div class="row pane-set">
+                    <div class="col-md-4">
+                        <div id="P2_25_1" class="spacingTop" runat="server"></div>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="P2_75_2" class="spacingTop" runat="server"></div>
+                    </div>
                 </div>
 
-                <div class="row dnnpane">
-                    <div id="P3_33_1" class="col-md-4 spacingTop" runat="server"></div>
-                    <div id="P3_33_2" class="col-md-4 spacingTop" runat="server"></div>
-                    <div id="P3_33_3" class="col-md-4 spacingTop" runat="server"></div>
+                <div class="row pane-set">
+                    <div class="col-md-4">
+                        <div id="P3_33_1" class="spacingTop" runat="server"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="P3_33_2" class="spacingTop" runat="server"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="P3_33_3" class="spacingTop" runat="server"></div>
+                    </div>
                 </div>
 
-                <div class="row dnnpane">
-                    <div id="ContentPaneLower" class="col-md-12 contentPane spacingTop" runat="server"></div>
+                <div class="row pane-set">
+                    <div class="col-md-12">
+                        <div id="ContentPaneLower" class="contentPane spacingTop" runat="server"></div>
+                    </div>
                 </div>
             </div>
         </main>
-       
+
     </div>
 
     <footer role="contentinfo">
         <div class="footer-above">
             <div class="container">
-                <div class="row dnnpane">
+                <div class="row pane">
                     <div id="footer_25_1" class="footer-col col-md-3 col-sm-6" runat="server"></div>
                     <div id="footer_25_2" class="footer-col col-md-3 col-sm-6" runat="server"></div>
                     <div class="clearfix d-none d-sm-block d-md-none"></div>
@@ -118,7 +138,7 @@
         </div>
         <div class="footer-below">
             <div class="container">
-                <div class="row dnnpane">
+                <div class="row pane">
                     <div class="col-md-12">
                         <div class="copyright">
                             <dnn:COPYRIGHT ID="dnnCopyright" runat="server" CssClass="" />
