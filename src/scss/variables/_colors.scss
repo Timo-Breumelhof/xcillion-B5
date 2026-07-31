@@ -14,3 +14,17 @@ $gray-600: #626262;
 $gray-700: #383838;
 $gray-800: #333333;
 $gray-900: #232323;
+
+// Primary scale — tints (100-400) and shades (600-900) derived from $primary as 500
+$primary: #007aa7;
+$secondary: #445c66;
+
+$primary-100: scale-color($primary, $lightness: 80%);
+$primary-200: scale-color($primary, $lightness: 60%);
+$primary-300: scale-color($primary, $lightness: 40%);
+$primary-400: scale-color($primary, $lightness: 20%);
+$primary-500: $primary;
+$primary-600: scale-color($primary, $lightness: -20%);
+$primary-700: scale-color($primary, $lightness: -40%);
+$primary-800: scale-color($primary, $lightness: -60%);
+$primary-900: scale-color($primary, $lightness: -80%);

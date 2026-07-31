@@ -27,7 +27,7 @@
 			vertical-align: center;
 
 			&:hover {
-				background: #d7d7d7;
+				background: $gray-300;
 				color: $login_color;
 				text-decoration: none;
 			}
@@ -55,7 +55,7 @@
 			line-height: 1.2em;
 
 			&:first-child:hover {
-				border-left: #222;
+				border-left: $gray-900;
 			}
 		}
 
@@ -86,21 +86,20 @@
 				text-align: center;
 				font-size: 11px;
 				color: #ffffff;
-				-webkit-text-shadow: 0px 1px 0px #333333;
-				text-shadow: 0px 1px 0px #333333;
+				text-shadow: 0px 1px 0px $gray-800;
 			}
 
 			img {
 				height: 32px;
 				width: 32px;
-				background: #333;
+				background: $gray-800;
 			}
 		}
 	}
 
 	.userNotifications {
-		border-left: 1px solid #ccc;
-		border-right: 1px solid #ccc;
+		border-left: 1px solid $gray-300;
+		border-right: 1px solid $gray-300;
 
 		strong {
 			height: 100%;

@@ -1,9 +1,7 @@
 /*==========  MAIN HEADER  ==========*/
-#topHeader {
+.top-header {
     background: $base_dark;
-    -moz-box-shadow: 1px 50px 100px 0px #cacaca;
-    -webkit-box-shadow: 1px 50px 100px 0px #cacaca;
-    box-shadow: 1px 50px 100px 0px #cacaca;
+    box-shadow: 1px 50px 100px 0px $gray-300;
     min-width: 25px;
     min-height: 34px;
     padding: 0;
@@ -19,7 +17,7 @@
 header {
     // background: $base_lighter;
 	background: #ffffff;
-	border-bottom: 1px solid #91AFCA;
+	border-bottom: 1px solid $buttons_light;
     padding: 1em 0;
 
 }
@@ -41,16 +39,6 @@ header {
     }
 
 }
-
-#mainHeader-inner {
-    padding: 1em 0;
-}
-
-#mainHeader-border {
-    background: #8fb299;
-    height:5px;
-}
-
 
 .navbar {
     align-items: center;

@@ -3,7 +3,7 @@
     line-height: 32px;
     width: auto;
 
-    background: #7ca0c0;
+    background: $base_lighter;
 
     >span {
         // No dnn class for this one..
@@ -26,7 +26,7 @@
                 font-size: 0.9em;
 
                 &::placeholder {
-                    color: #818181;
+                    color: $gray-500;
                 }
             }
 
@@ -124,7 +124,7 @@
 
 .SearchButton,
 .search-icon {
-    background: url("#{$path-img}/search.png") no-repeat scroll center center #C3C1C1;
+    background: url("#{$path-img}/search.png") no-repeat scroll center center $gray-300;
     width: 36px;
     height: 34px;
     display: block;
@@ -132,6 +132,6 @@
     line-height: 34px;
     text-align: center;
     cursor: pointer;
-    color: #dcddd8;
+    color: $gray-200;
     text-indent: -9999px;
 }
