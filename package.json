@@ -1,7 +1,7 @@
 {
   "name": "dnn-theme",
-  "version": "3.0.0",
-  "description": "40FINGERS Demo THeme Base",
+  "version": "0.9.0",
+  "description": "40FINGERS Demo Theme Base",
   "scripts": {
     "start": "gulp --gulpfile _build/gulpfile.js",
     "build": "gulp build --gulpfile _build/gulpfile.js",
