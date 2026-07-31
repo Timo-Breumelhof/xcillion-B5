@@ -22,7 +22,7 @@
 <div id="siteWrapper">
 
 
-    <div id="topHeader">
+    <div class="top-header">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 d-flex flex-wrap">
@@ -77,7 +77,7 @@
             <div id="breadcrumb" class="skin-breadcrumb col-md-12">
                 <dnn:BREADCRUMB ID="dnnBreadcrumb" runat="server" CssClass="breadcrumbLink" RootLevel="0" Separator="&lt;img src=&quot;/Portals/_default/Skins/Xcillion/Images/breadcrumb-arrow.png&quot; alt=&quot;breadcrumb separator&quot;&gt;" HideWithNoBreadCrumb="true" />
             </div>
-            <div id="mainContent-inner">
+            <div class="main-content-inner">
                 <div class="row pane-set">
                     <div class="col-md-12">
                         <div id="ContentPane" class="contentPane" runat="server"></div>
