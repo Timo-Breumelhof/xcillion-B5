@@ -67,19 +67,17 @@
     </header>
 
     <!-- Page Content -->
-    <div class="container">
-        <main role="main" class="panes">
-            <div class="row pane">
-                <div class="col-md-12">
-                    <div id="HeaderPane" class="headerPane" runat="server"></div>
-                </div>
+        <main role="main" class="container content-wrap">
+            <div class="row">
+                    <div id="HeaderPane" class="p-0 headerPane" runat="server"></div>
+
             </div>
             <div id="breadcrumb" class="skin-breadcrumb col-md-12">
                 <dnn:BREADCRUMB ID="dnnBreadcrumb" runat="server" CssClass="breadcrumbLink" RootLevel="0" Separator="&lt;img src=&quot;/Portals/_default/Skins/Xcillion/Images/breadcrumb-arrow.png&quot; alt=&quot;breadcrumb separator&quot;&gt;" HideWithNoBreadCrumb="true" />
             </div>
-            <div class="main-content-inner">
+            <div class="panes">
                 <div class="row pane-set">
-                    <div class="col-md-12">
+                    <div class="col-12">
                         <div id="ContentPane" class="contentPane" runat="server"></div>
                     </div>
                 </div>
@@ -122,7 +120,6 @@
             </div>
         </main>
 
-    </div>
 
     <footer role="contentinfo">
         <div class="footer-above">
