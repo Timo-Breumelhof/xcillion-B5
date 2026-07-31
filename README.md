@@ -41,6 +41,8 @@ The original project targeted DNN 8 with Bootstrap 3 and has been inactive since
 - Refactored layout and utility classes
 - Modernized markup and CSS structure
 - Cleaned up legacy assets and unused code
+- Removed some of the Layout versions as "home" and "404" where mere duplicates of "inner"
+- And a lot more... :-)
 
 ---
 
