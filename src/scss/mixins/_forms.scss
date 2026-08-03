@@ -1,0 +1,7 @@
+// Placeholder text
+@mixin placeholder($color: $input-color-placeholder) {
+  &::placeholder {
+    color: $color;
+    opacity: 1;
+  }
+}

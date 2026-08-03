@@ -1,0 +1,32 @@
+// Backface visibility
+@mixin backface-visibility($visibility) {
+  backface-visibility: $visibility;
+}
+
+// Box shadow
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+}
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+  box-sizing: $boxmodel;
+}
+
+// CSS3 Content Columns
+@mixin content-columns($column-count, $column-gap: $grid-gutter-width) {
+  column-count: $column-count;
+  column-gap: $column-gap;
+}
+
+// Optional hyphenation
+@mixin hyphens($mode: auto) {
+  word-wrap: break-word;
+  -webkit-hyphens: $mode; // Safari still requires this prefix; no unprefixed fallback exists there
+  hyphens: $mode;
+}
+
+// User select
+@mixin user-select($select) {
+  user-select: $select;
+}
