@@ -1,0 +1,22 @@
+@mixin text-on-dark-bg {
+
+		.cont-header-title,
+		.cont-content,
+		h1, h2, h3, h4, h5, h6 {
+			color: $white;
+		}
+
+		a {
+
+			&:link,
+			&:active {
+				color: $white;
+				text-decoration: underline;
+
+			}
+
+			&:visited {
+				color: $gray-300;
+			}
+		}
+	}

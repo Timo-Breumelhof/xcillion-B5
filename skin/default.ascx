@@ -43,7 +43,7 @@
     </div>
 
     <!--Header -->
-    <header role="banner">
+    <header class="skin-header">
         <div class="container px-0 px-md-3">
             <div class="navbar navbar-expand-md" role="navigation">
                 <div id="navbar-top-wrapper" class="ps-3 ps-md-0    ">
@@ -101,6 +101,15 @@
                 </div>
 
                 <div class="row pane-set">
+                    <div class="col-md-6">
+                        <div id="P2_50_1" class="spacingTop" runat="server"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="P2_50_2" class="spacingTop" runat="server"></div>
+                    </div>
+                </div>
+
+                <div class="row pane-set">
                     <div class="col-md-4">
                         <div id="P3_33_1" class="spacingTop" runat="server"></div>
                     </div>
@@ -121,7 +130,7 @@
         </main>
 
 
-    <footer role="contentinfo">
+    <footer class="skin-footer">
         <div class="footer-above">
             <div class="container">
                 <div class="row pane">

@@ -20,7 +20,13 @@
 // ----------------------------------------------------------------------
 @import "variables/colors";
 @import "variables/variables";
-@import "parts/mixins";
+@import "mixins/animations";
+@import "mixins/transforms";
+@import "mixins/transitions";
+@import "mixins/misc";
+@import "mixins/forms";
+@import "mixins/callouts";
+@import "mixins/texts";
 
 // ----------------------------------------------------------------------
   // Bootstrap 5
