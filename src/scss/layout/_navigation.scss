@@ -1,6 +1,7 @@
 // Navigation variables — move to _variables.scss once a central file is in place
 $navbar-toggle-color: $gray-300 !default;
 $navbar-active-color: $primary !default;
+$navbar-color: var(--bs-body-color) !default;
 
 $nav-border: solid 1px $gray-300 !default;
 $nav-active-bg: $gray-100 !default;
@@ -32,6 +33,12 @@ $nav-dd-toggle-bg-hover: $secondary !default;
 
 
 .navbar-nav {
+    // Bootstrap feeds .nav-link's color from --bs-navbar-color (set on
+    // .navbar from $navbar-light-color, a muted rgba tint) — override it
+    // here to the normal body text color instead. .active keeps its own
+    // explicit color below and isn't affected by this.
+    --bs-navbar-color: #{$navbar-color};
+
     flex-wrap: wrap;
     border-top: $nav-border;
 
@@ -118,6 +125,15 @@ $nav-dd-toggle-bg-hover: $secondary !default;
 
         .nav-link {
             flex-grow: 1;
+
+            // The global a:link/a:visited rule in _text.scss (specificity
+            // 0,1,1) otherwise beats this class's plain color declaration
+            // (0,1,0) and overrides it with $primary — re-assert at :link/
+            // :visited (0,2,0) to win back the intended --bs-navbar-color.
+            &:link,
+            &:visited {
+                color: var(--bs-nav-link-color);
+            }
 
             &.active {
                 color: $navbar-active-color;
