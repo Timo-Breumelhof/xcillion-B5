@@ -45,6 +45,7 @@ The original project targeted DNN 8 with Bootstrap 3 and has been inactive since
 - Restyling in many places
 - Removed some of the Layout versions as "home" and "404" where mere duplicates of "inner"
 - Completely revamped the Containers as a lot of them did not seem to make much sense any more. (also add containers with a background)
+- Add Bootstrap Icons to the Theme
 - And a lot more... :-)
 
 ---
