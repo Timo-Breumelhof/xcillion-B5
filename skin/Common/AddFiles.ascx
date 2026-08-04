@@ -1,5 +1,6 @@
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
 <%-- CSS files --%>
+<dnn:DnnCssInclude ID="BootstrapIconsCSS" runat="server" FilePath="vendors/bootstrap-icons/font/bootstrap-icons.css" PathNameAlias="SkinPath" />
 <dnn:DnnCssInclude ID="SkinCSS" runat="server" FilePath="skin.css" PathNameAlias="SkinPath" />
 
 <%-- JS files --%>

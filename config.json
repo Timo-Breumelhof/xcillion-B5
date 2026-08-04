@@ -17,6 +17,13 @@
         "dist/js/bootstrap.bundle.min.js",
         "dist/js/bootstrap.bundle.min.js.map"
       ]
+    },
+    "bootstrap-icons": {
+      "package": "bootstrap-icons",
+      "files": [
+        "font/bootstrap-icons.css",
+        "font/fonts/**/*"
+      ]
     }
   }
 }
