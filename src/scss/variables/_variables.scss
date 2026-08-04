@@ -19,6 +19,9 @@ $h3-font-size: 1.375rem;
 $h4-font-size: 1.25rem;
 $h5-font-size: 1.125rem;
 $h6-font-size: 1rem;
+
+// Bootstrap's own small-text size (drives .btn-sm, .form-control-sm, tooltips, popovers, etc.)
+$font-size-sm: 0.75rem;
 $news_content_light: $gray-500;
 $news_content_dark: $gray-900;
 $footer_color_links: $gray-300;

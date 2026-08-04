@@ -22,12 +22,12 @@
 		margin-left: 10px;
 		display:inline-block;
 		font-weight: 600;
-		font-size: 11px;
+		font-size: $font-size-sm;
 		color: $breadcrumb_color;
 
 		&:first-child {
-			
-            font-size: 12px !important;
+
+            font-size: $font-size-sm !important;
             font-weight: 400;
             color: $gray-500;
 		}
