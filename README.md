@@ -2,7 +2,7 @@
 
 > A modern reimagining of the classic DNN Xcillion theme — rebuilt from the ground up for Bootstrap 5.
 
-⚠️ **In development!**
+⚠️ **In Beta testing!**
 
 **Xcillion-B5** is a modernized, standalone rewrite of the Xcillion theme that shipped with DNN 8 and was replaced by the Aperture theme in DNN 10 — upgraded from Bootstrap 3 to Bootstrap 5. It aims to bring the original theme up to current web standards while keeping it lightweight, maintainable, and framework-native.
 
